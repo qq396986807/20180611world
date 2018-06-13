@@ -3,7 +3,7 @@
  */
 var swiperV = new Swiper('.swiper-container-v', {
     pagination: '.swiper-pagination-v',
-    noSwipingClass : 'stop-swiping',
+    // noSwipingClass : 'stop-swiping',
     effect : 'fade',
     paginationClickable: true,
 });
@@ -104,7 +104,7 @@ function init() {
 $("#next").click(function () {
     var flag = $("#argee").is(':checked');
     if(flag){
-        next(1);
+        next(3);
     }else {
         var M = {};
         if(M.dialog1){
@@ -245,6 +245,13 @@ $(".shareBtn").click(function () {
 function dell(e) {
     $(e).remove();
 }
+
+//长按二维码
+$(".ewm").mousedown(function() {
+    timeout = setTimeout(function() {
+        alert("长按了识别二维码!");
+    }, 2000);
+});
 //微信share
 var data = {};
 data.pageurl = window.location.href;
