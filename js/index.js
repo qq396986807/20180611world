@@ -269,30 +269,25 @@ $(".groupBox>div").click(function () {
                 dataInfo.remark="";
                 dataInfo.champion=self.children(".countryName").text();//国家
                 dataInfo.group_name="";//类别
-                    $.getJSON("http://gb.wechat.wcampaign.cn/user/getsingle/"+userData.original.openid,{}, function(data){
-                    if(data != ''){
-                        M.dialog1 = jqueryAlert({
-                            'content' : '您已经投过票了,请勿重复投票!',
-                            'closeTime' : 2000
-                        })
-                    }else{
-                        $.post('http://gb.wechat.wcampaign.cn/user/add', dataInfo, function(data){
-
-                        }, "JSON");
-                    }
-
-                    $(".tx").attr("src",userData.original.headimgurl);
-                    $(".tx").show();
-                    var top = self.offset().top;
-                    var left = self.offset().left;
-                    var h = self.height()/2.6 - 20;
-                    var w = self.width()/2 - 20;
-                    $(".tx").animate({width:"40px",top:top+h+"px",left:left+w+'px'},2000,function () {
-                        $(".tx").hide();
-                        next(2);
-                    });
-                });
-
+                if(!flagAdd){
+                    M.dialog1 = jqueryAlert({
+                        'content' : '您已经投过票了,请勿重复投票!',
+                        'closeTime' : 2000
+                    })
+                }else{
+                    $.post('http://gb.wechat.wcampaign.cn/user/add', dataInfo, function(data){
+                        $(".tx").attr("src",userData.original.headimgurl);
+                        $(".tx").show();
+                        var top = self.offset().top;
+                        var left = self.offset().left;
+                        var h = self.height()/2.6 - 20;
+                        var w = self.width()/2 - 20;
+                        $(".tx").animate({width:"40px",top:top+h+"px",left:left+w+'px'},2000,function () {
+                            $(".tx").hide();
+                            next(2);
+                        });
+                    }, "JSON");
+                }
             },
             '取消' : function(){
                 M.dialog3.close();
