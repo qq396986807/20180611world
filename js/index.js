@@ -164,8 +164,8 @@ function init() {
     if(getDeviceType() == 'iphone'){
         var divW = $(".groupBox > div").width()
         alert(divW);
-        $(".voteTx").css("margin-left",divW * 0.03 + 'px');
-        alert($(".voteTx").attr('margin-left'));
+        $(".voteTx").css("marginLeft",divW * 0.03 + 'px');
+        alert($(".voteTx").attr('marginLeft'));
     }
 }
 
