@@ -269,12 +269,7 @@ $(".groupBox>div").click(function () {
                 dataInfo.remark="";
                 dataInfo.champion=self.children(".countryName").text();//国家
                 dataInfo.group_name="";//类别
-                if(!flagAdd){
-                    M.dialog1 = jqueryAlert({
-                        'content' : '您已经投过票了,请勿重复投票!',
-                        'closeTime' : 2000
-                    })
-                }else{
+                if(flagAdd){
                     $.post('http://gb.wechat.wcampaign.cn/user/add', dataInfo, function(data){
                         $(".tx").attr("src",userData.original.headimgurl);
                         $(".tx").show();
@@ -287,6 +282,11 @@ $(".groupBox>div").click(function () {
                             next(2);
                         });
                     }, "JSON");
+                }else{
+                    M.dialog1 = jqueryAlert({
+                        'content' : '您已经投过票了,请勿重复投票!',
+                        'closeTime' : 2000
+                    })
                 }
             },
             '取消' : function(){
