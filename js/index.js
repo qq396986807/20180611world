@@ -156,6 +156,10 @@ function init() {
     vote();//判断该用户是否投过票了
 }
  init();
+// $(".loader").hide(500)
+// advertisement();
+// $(".advertisement").fadeIn(2000);
+// $(".mask").fadeIn(2000);
 
 
 //判断该用户是否投过票了
@@ -344,13 +348,45 @@ function advertisement() {
         {src:'img/know/20.jpg',text:'俄罗斯新建的体育馆屋顶膜使用的是Low & Bonar的 Valmex®产品。屋顶膜覆盖了体育馆顶棚80,000平方米。得益于它所使用的轻便面料，搭建方才能更方便的运输和更快更省的完成搭建。',url1:'https://www.lowandbonar.com/news/low-bonar-supplies-2018-world-cup-stadium-roof/',url2:''},
         {src:'img/know/21.jpg',text:'孟加拉一名狂热的德国足球粉丝自己出资制作了一幅长达5.5公里的德国国旗，以此表示对德国队的支持。为了制作这幅史上最长的德国国旗，他甚至卖掉土地来筹备购买布料所需的资金。上周这名粉丝已将国旗赠送给德国领事馆。',url1:'https://www.bbc.com/news/world-asia-44385018',url2:'https://www.groz-beckert.com/zh/%E4%BA%A7%E5%93%81/%E6%9C%BA%E7%BB%87/'},
     ]
-    var num = Math.floor(Math.random()*22);
+    var num = Math.floor(Math.random()*21);
+    var chickKnow ;
+    if(num == 0 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT1', 'literature']); chickKnow = 'FACT1'}
+    if(num == 1 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT2', 'literature']); chickKnow = 'FACT2'}
+    if(num == 2 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT3', 'literature']); chickKnow = 'FACT3'}
+    if(num == 3 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT4', 'literature']); chickKnow = 'FACT4'}
+    if(num == 4 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT5', 'literature']); chickKnow = 'FACT5'}
+    if(num == 5 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT6', 'literature']); chickKnow = 'FACT6'}
+    if(num == 6 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT7', 'literature']); chickKnow = 'FACT7'}
+    if(num == 7 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT8', 'literature']); chickKnow = 'FACT8'}
+    if(num == 8 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT9', 'literature']); chickKnow = 'FACT9'}
+    if(num == 9 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT10', 'literature']); chickKnow = 'FACT10'}
+    if(num == 10 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT11', 'literature']); chickKnow = 'FACT11'}
+    if(num == 11 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT12', 'literature']); chickKnow = 'FACT12'}
+    if(num == 12 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT13', 'literature']); chickKnow = 'FACT13'}
+    if(num == 13 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT14', 'literature']); chickKnow = 'FACT14'}
+    if(num == 14 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT15', 'literature']); chickKnow = 'FACT15'}
+    if(num == 15 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT16', 'literature']); chickKnow = 'FACT16'}
+    if(num == 16 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT17', 'literature']); chickKnow = 'FACT17'}
+    if(num == 17 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT18', 'literature']); chickKnow = 'FACT18'}
+    if(num == 18 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT19', 'literature']); chickKnow = 'FACT19'}
+    if(num == 19 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT20', 'literature']); chickKnow = 'FACT20'}
+    if(num == 20 ){_hmt.push(['_trackEvent', 'FunFact', 'FACT21', 'literature']); chickKnow = 'FACT21'}
     var advertis = dataAd[num];
-    if(advertis.url1==""){$(".adMore1").hide()}else{$(".adMore1").parent().attr('href',advertis.url1)}
-    if(advertis.url2==""){$(".adMore2").hide()}else{$(".adMore2").parent().attr('href',advertis.url2)}
+    if(advertis.url1==""){
+        $(".adMore1").hide()
+    }else{
+        $(".adMore1").parent().attr('href',"javascript:locationUrl('"+chickKnow+"','"+advertis.url1+"')")
+    }
+    // if(advertis.url2==""){$(".adMore2").hide()}else{$(".adMore2").parent().attr('href',advertis.url2)}
     $("#know").attr("src",advertis.src);
     $(".adCon").text(advertis.text);
 
+}
+
+//跳转知识来源
+function locationUrl(name,url) {
+    // _hmt.push(['_trackEvent', '知识来源',name, 'literature']);
+    window.location.href = url;
 }
 
 //点击分享浮层
@@ -367,8 +403,8 @@ function dell(e) {
 //长按二维码
 $(".ewm").mousedown(function() {
     timeout = setTimeout(function() {
-        alert("长按了识别二维码!");
-    }, 2000);
+        _hmt.push(['_trackEvent', 'qrcode', '长按识别', 'literature'])
+    }, 500);
 });
 //微信share
 var data = {};
@@ -387,7 +423,7 @@ wx.ready(function () {
         success: function () {
             next(4)
             $(".sharec").remove();
-            // _hmt.push(['_trackEvent', '分享', '朋友圈', 'literature']);
+            _hmt.push(['_trackEvent', '分享', '朋友圈', 'literature']);
         }
     });
     wx.onMenuShareAppMessage({
@@ -400,7 +436,7 @@ wx.ready(function () {
         success: function () {
             next(4)
             $(".sharec").remove();
-            // _hmt.push(['_trackEvent', '分享', '朋友', 'literature']);
+            _hmt.push(['_trackEvent', '分享', '朋友', 'literature']);
         }
     });
 })

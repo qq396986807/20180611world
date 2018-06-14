@@ -52,24 +52,21 @@ body,p,div,span,input,img,li,ul{
     font-size: 20px;
     text-decoration: underline;
 }
-.game2{
+.game2,.game3{
     font-size: 13px;
     margin-top: 3%;
 }
-.gameule{
-    width: 70%;
-    margin-top: 8%;
-    font-size: 12px;
-    margin-left: 15%;
-    line-height: 20px;
-    text-align: left;
+.game3{
+    text-decoration: underline;
 }
+
 .gameContent{
     width: 70%;
     margin-top: 6%;
     font-size: 12px;
     margin-left: 15%;
     line-height: 20px;
+    text-align: left;
 }
 .argee{
     font-size: 14px;
@@ -143,9 +140,10 @@ body,p,div,span,input,img,li,ul{
     height: auto;
 }
 .countryName{
-    color: white;
+    color: #005426;
     font-size: 12px;
     margin-top: -1%;
+    font-weight: 900;
 }
 .mask{
     width: 100%;
@@ -182,10 +180,10 @@ body,p,div,span,input,img,li,ul{
     background-repeat: no-repeat;
 }
 .ewm{
-    width: 50%;
+    width: 70%;
     height:auto;
     position: absolute;
-    left: 25%;
+    left: 15%;
     top: 1%;
 }
 #next{
@@ -216,19 +214,23 @@ body,p,div,span,input,img,li,ul{
     margin-top: 5%;
     margin-left: 10%;
     font-size: 12px;
+    text-align: justify;
 }
 .adMore1,.adMore2{
     font-size: 12px;
     margin-top: 5%;
- }
+    transform: scale(0.8);
+}
 .shareBtn{
-    width: 47%;
+    width: 60%;
     height: 18%;
-    top: 64%;
-    left: 23%;
+    top: 59%;
+    left: 20%;
     position: relative;
-    border: 1px solid black;
-    opacity: 0;
+    /*border: 1px solid black;*/
+    background: url(../img/shareBtn.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 .sharec{
     width: 100%;
@@ -385,4 +387,21 @@ body,p,div,span,input,img,li,ul{
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+.share .text1{
+    color: #005426;
+    font-size: 19px;
+    position: relative;
+    top: 52%;
+    text-decoration: underline;
+}
+.share .text2{
+    color: #005426;
+    font-size: 19px;
+    position: relative;
+    top: 57%;
+    width: 200%;
+    left: -50%;
+    line-height: 22px;
 }
