@@ -3,7 +3,7 @@
  */
 var swiperV = new Swiper('.swiper-container-v', {
     pagination: '.swiper-pagination-v',
-    // noSwipingClass : 'stop-swiping',
+    noSwipingClass : 'stop-swiping',
     effect : 'fade',
     paginationClickable: true,
 });
