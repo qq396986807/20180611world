@@ -8,6 +8,12 @@ var swiperV = new Swiper('.swiper-container-v', {
     paginationClickable: true,
 });
 
+window.onpageshow = function(event){
+    if (event.persisted) {
+        window.location.reload();
+    }
+}
+
 //获取URL参数
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
