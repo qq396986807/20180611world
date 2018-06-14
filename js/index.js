@@ -3,7 +3,7 @@
  */
 var swiperV = new Swiper('.swiper-container-v', {
     pagination: '.swiper-pagination-v',
-    // noSwipingClass : 'stop-swiping',
+    noSwipingClass : 'stop-swiping',
     effect : 'fade',
     paginationClickable: true,
 });
@@ -162,9 +162,7 @@ function init() {
     vote();//判断该用户是否投过票了
     //判断是否是ios
     if(getDeviceType() == 'iphone'){
-
-
-        $(".voteTx").css("marginLeft",'-200px');
+        $(".voteTx").css("marginLeft",'200px');
 
     }
 }
