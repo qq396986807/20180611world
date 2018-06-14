@@ -164,7 +164,7 @@ function init() {
     if(getDeviceType() == 'iphone'){
 
 
-        $(".voteTx").css("marginLeft",'-40px');
+        $(".voteTx").css("marginLeft",'-55px');
 
     }
 }
