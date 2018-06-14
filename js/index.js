@@ -162,8 +162,10 @@ function init() {
     vote();//判断该用户是否投过票了
     //判断是否是ios
     if(getDeviceType() == 'iphone'){
-        var divW = $(".groupBox > div").height()
+        var divW = $(".groupBox > div").width()
+        alert(divW);
         $(".voteTx").css("margin-left",divW * 0.03 + 'px');
+        alert($(".voteTx").attr('margin-left'));
     }
 }
 
