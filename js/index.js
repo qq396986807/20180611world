@@ -3,7 +3,7 @@
  */
 var swiperV = new Swiper('.swiper-container-v', {
     pagination: '.swiper-pagination-v',
-    noSwipingClass : 'stop-swiping',
+    // noSwipingClass : 'stop-swiping',
     effect : 'fade',
     paginationClickable: true,
 });
@@ -160,7 +160,29 @@ function init() {
 
     getVote();//国家投数的显示
     vote();//判断该用户是否投过票了
+    //判断是否是ios
+    if(getDeviceType() == 'iphone'){
+        var divW = $(".groupBox > div").height()
+        $(".voteTx").css("margin-left",divW * 0.03 + 'px');
+    }
 }
+
+function getDeviceType() {
+    var deviceType = navigator.userAgent;
+    var agents = new Array("android", "iphone", "symbianos", "windows mobile", "ipad", "ipod", "windows ce", "mac", "linux");
+
+    for (var i = 0; i < agents.length; i++)
+    {
+        if (navigator.userAgent.toLowerCase().indexOf(agents[i]) > 0)
+        {
+            deviceType = agents[i];
+            break;
+        }
+    }
+
+    return deviceType;
+}
+
  init();
 // $(".loader").hide(500)
 // advertisement();
