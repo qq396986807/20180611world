@@ -160,11 +160,6 @@ function init() {
 
     getVote();//国家投数的显示
     vote();//判断该用户是否投过票了
-    //判断是否是ios
-    if(getDeviceType() == 'iphone'){
-        alert(22);
-        $(".voteTx").css("marginLeft",'-20px');
-    }
 }
 
 function getDeviceType() {
@@ -199,6 +194,10 @@ function vote() {
             var champion = data[0]['champion'];
             var total = 1;
             var oImg = $("<img class='voteTx' src='"+data[0]['headimgurl']+"' alt=''>")
+            //判断是否是ios
+            if(getDeviceType() == 'iphone'){
+                oImg.css("marginLeft",'-20px');
+            }
             if(champion == '俄罗斯'){$(".champion1").prepend(oImg)}
             if(champion == '沙特阿拉伯'){$(".champion2").prepend(oImg)}
             if(champion == '埃及'){$(".champion3").prepend(oImg)}
