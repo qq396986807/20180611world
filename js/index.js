@@ -304,7 +304,10 @@ $(".groupBox>div").click(function () {
 //点击选择部门
 $(".table>div").click(function () {
     dataInfo.group_name=$(this).text();
-    $.post('http://gb.wechat.wcampaign.cn/user/update', {openid:userData.original.openid,group_name:dataInfo.group_name}, function(data){
+    var uesrData = {};
+    uesrData.openid = userData.original.openid;
+    uesrData.group_name = dataInfo.group_name;
+    $.post('http://gb.wechat.wcampaign.cn/user/update',uesrData , function(data){
         advertisement();
         $(".advertisement").fadeIn(2000);
         $(".mask").fadeIn(2000);
