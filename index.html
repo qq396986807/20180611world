@@ -1,7 +1,7 @@
 ﻿<!doctype html>
 <html>
 <head>
-    <title>一起预测世界杯冠军!</title>
+    <title>一起预测世界杯冠军</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -10,10 +10,31 @@
     <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
+<div class="loader">
+    <div class="loader-inner">
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+        <div class="loader-line-wrap">
+            <div class="loader-line"></div>
+        </div>
+    </div>
+</div>
 <img class="tx" src="img/tx.jpg" alt="">
 <div class="mask"></div>
 <div class="advertisement">
-    <div class="adImg"></div>
+    <div class="adImg">
+        <img id="know" src="#" alt="">
+    </div>
     <p class="yknow">你知道吗?</p>
     <p class="adCon"></p>
     <a href="#"><p class="adMore1">知识来源</p></a>
@@ -33,6 +54,195 @@
             </div>
             <img id="next" src="img/next.png" alt="">
         </div>
+        <div class="swiper-slide page3 stop-swiping">
+            <img class="page4Text" src="img/page4text.png" alt="">
+            <div class="country">
+                <div style="margin-top: 0" class="group">A组</div>
+                <div class="groupBox">
+                    <div class="champion1" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a1.png" alt="">
+                        <p class="countryName">俄罗斯</p>
+                        <p class="vote vote1">0</p>
+                    </div>
+                    <div class="champion2">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a2.png" alt="">
+                        <p class="countryName">沙特阿拉伯</p>
+                        <p class="vote vote2">0</p>
+                    </div>
+                    <div class="champion3" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a3.png" alt="">
+                        <p class="countryName">埃及</p>
+                        <p class="vote vote3">0</p>
+                    </div>
+                    <div class="champion4" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a4.png" alt="">
+                        <p class="countryName">乌拉圭</p>
+                        <p class="vote vote4">0</p>
+                    </div>
+                </div>
+                <div class="group">B组</div>
+                <div class="groupBox">
+                    <div class="champion5" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b1.png" alt="">
+                        <p class="countryName">葡萄牙</p>
+                        <p class="vote vote5">0</p>
+                    </div>
+                    <div class="champion6">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b2.png" alt="">
+                        <p class="countryName">西班牙</p>
+                        <p class="vote vote6">0</p>
+                    </div>
+                    <div class="champion7" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b3.png" alt="">
+                        <p class="countryName">摩洛哥</p>
+                        <p class="vote vote7">0</p>
+                    </div>
+                    <div class="champion8" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b4.png" alt="">
+                        <p class="countryName">伊朗</p>
+                        <p class="vote vote8">0</p>
+                    </div>
+                </div>
+                <div class="group">C组</div>
+                <div class="groupBox">
+                    <div class="champion9" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c1.png" alt="">
+                        <p class="countryName">法国</p>
+                        <p class="vote vote9">0</p>
+                    </div>
+                    <div class="champion10">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c2.png" alt="">
+                        <p class="countryName">澳大利亚</p>
+                        <p class="vote vote10">0</p>
+                    </div>
+                    <div class="champion11" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c3.png" alt="">
+                        <p class="countryName">秘鲁</p>
+                        <p class="vote vote11">0</p>
+                    </div>
+                    <div class="champion12" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c4.png" alt="">
+                        <p class="countryName">丹麦</p>
+                        <p class="vote vote12">0</p>
+                    </div>
+                </div>
+                <div class="group">D组</div>
+                <div class="groupBox">
+                    <div class="champion13" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d1.png" alt="">
+                        <p class="countryName">阿根廷</p>
+                        <p class="vote vote13">0</p>
+                    </div>
+                    <div class="champion14">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d2.png" alt="">
+                        <p class="countryName">冰岛</p>
+                        <p class="vote vote14">0</p>
+                    </div>
+                    <div class="champion15" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d3.png" alt="">
+                        <p class="countryName">克罗地亚</p>
+                        <p class="vote vote15">0</p>
+                    </div>
+                    <div class="champion16" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d4.png" alt="">
+                        <p class="countryName">尼日利亚</p>
+                        <p class="vote vote16">0</p>
+                    </div>
+                </div>
+                <div class="group">E组</div>
+                <div class="groupBox">
+                    <div class="champion17" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e1.png" alt="">
+                        <p class="countryName">巴西</p>
+                        <p class="vote vote17">0</p>
+                    </div>
+                    <div class="champion18">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e2.png" alt="">
+                        <p class="countryName">瑞士</p>
+                        <p class="vote vote18">0</p>
+                    </div>
+                    <div class="champion19" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e3.png" alt="">
+                        <p class="countryName">哥斯达黎加</p>
+                        <p class="vote vote19">0</p>
+                    </div>
+                    <div class="champion20" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e4.png" alt="">
+                        <p class="countryName">塞尔维亚</p>
+                        <p class="vote vote20">0</p>
+                    </div>
+                </div>
+                <div class="group">F组</div>
+                <div class="groupBox">
+                    <div class="champion21" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f1.png" alt="">
+                        <p class="countryName">德国</p>
+                        <p class="vote vote21">0</p>
+                    </div>
+                    <div class="champion22">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f2.png" alt="">
+                        <p class="countryName">墨西哥</p>
+                        <p class="vote vote22">0</p>
+                    </div>
+                    <div class="champion23" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f3.png" alt="">
+                        <p class="countryName">瑞典</p>
+                        <p class="vote vote23">0</p>
+                    </div>
+                    <div class="champion24" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f4.png" alt="">
+                        <p class="countryName">韩国</p>
+                        <p class="vote vote24">0</p>
+                    </div>
+                </div>
+                <div class="group">G组</div>
+                <div class="groupBox">
+                    <div class="champion25" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g1.png" alt="">
+                        <p class="countryName">比利时</p>
+                        <p class="vote vote25">0</p>
+                    </div>
+                    <div class="champion26">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g2.png" alt="">
+                        <p class="countryName">巴拿马</p>
+                        <p class="vote vote26">0</p>
+                    </div>
+                    <div class="champion27" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g3.png" alt="">
+                        <p class="countryName">突尼斯</p>
+                        <p class="vote vote27">0</p>
+                    </div>
+                    <div class="champion28" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g4.png" alt="">
+                        <p class="countryName">英格兰</p>
+                        <p class="vote vote28">0</p>
+                    </div>
+                </div>
+                <div class="group">H组</div>
+                <div style="margin-bottom: 8%" class="groupBox">
+                    <div class="champion29" style="margin-left: 0">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h1.png" alt="">
+                        <p class="countryName">波兰</p>
+                        <p class="vote vote29">0</p>
+                    </div>
+                    <div class="champion30">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h2.png" alt="">
+                        <p class="countryName">塞内加尔</p>
+                        <p class="vote vote30">0</p>
+                    </div>
+                    <div class="champion31" style="margin-left: 0;margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h3.png" alt="">
+                        <p class="countryName">哥伦比亚</p>
+                        <p class="vote vote31">0</p>
+                    </div>
+                    <div class="champion32" style="margin-top: 15px;">
+                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h4.png" alt="">
+                        <p class="countryName">日本</p>
+                        <p class="vote vote32">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="swiper-slide page2 stop-swiping">
             <img class="page3title" src="img/page3title.png" alt="">
             <!--<p class="page2Ques">对格罗茨-贝克特的哪个产品部门感兴趣？<br />现在就告诉我们吧！</p>-->
@@ -44,163 +254,6 @@
                 <div><p class="categary">簇绒</p></div>
                 <div style="margin-left: 0;"><p class="categary">梳理</p></div>
                 <div><p class="categary">缝纫</p></div>
-            </div>
-        </div>
-        <div class="swiper-slide page3 stop-swiping">
-            <img class="page4Text" src="img/page4text.png" alt="">
-            <div class="country">
-                <div style="margin-top: 0" class="group">A组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a1.png" alt="">
-                        <p class="countryName">俄罗斯</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a2.png" alt="">
-                        <p class="countryName">沙特阿拉伯</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a3.png" alt="">
-                        <p class="countryName">埃及</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/a4.png" alt="">
-                        <p class="countryName">乌拉圭</p>
-                    </div>
-                </div>
-                <div class="group">B组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b1.png" alt="">
-                        <p class="countryName">葡萄牙</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b2.png" alt="">
-                        <p class="countryName">西班牙</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b3.png" alt="">
-                        <p class="countryName">摩洛哥</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/b4.png" alt="">
-                        <p class="countryName">伊朗</p>
-                    </div>
-                </div>
-                <div class="group">C组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c1.png" alt="">
-                        <p class="countryName">法国</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c2.png" alt="">
-                        <p class="countryName">澳大利亚</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c3.png" alt="">
-                        <p class="countryName">秘鲁</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/c4.png" alt="">
-                        <p class="countryName">丹麦</p>
-                    </div>
-                </div>
-                <div class="group">D组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d1.png" alt="">
-                        <p class="countryName">阿根廷</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d2.png" alt="">
-                        <p class="countryName">冰岛</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d3.png" alt="">
-                        <p class="countryName">克罗地亚</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/d4.png" alt="">
-                        <p class="countryName">尼日利亚</p>
-                    </div>
-                </div>
-                <div class="group">E组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e1.png" alt="">
-                        <p class="countryName">巴西</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e2.png" alt="">
-                        <p class="countryName">瑞士</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e3.png" alt="">
-                        <p class="countryName">哥斯达黎加</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/e4.png" alt="">
-                        <p class="countryName">塞尔维亚</p>
-                    </div>
-                </div>
-                <div class="group">F组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f1.png" alt="">
-                        <p class="countryName">德国</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f2.png" alt="">
-                        <p class="countryName">墨西哥</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f3.png" alt="">
-                        <p class="countryName">瑞典</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/f4.png" alt="">
-                        <p class="countryName">韩国</p>
-                    </div>
-                </div>
-                <div class="group">G组</div>
-                <div class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g1.png" alt="">
-                        <p class="countryName">比利时</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g2.png" alt="">
-                        <p class="countryName">巴拿马</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g3.png" alt="">
-                        <p class="countryName">突尼斯</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/g4.png" alt="">
-                        <p class="countryName">英格兰</p>
-                    </div>
-                </div>
-                <div class="group">H组</div>
-                <div style="margin-bottom: 8%" class="groupBox">
-                    <div style="margin-left: 0">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h1.png" alt="">
-                        <p class="countryName">波兰</p>
-                    </div>
-                    <div>
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h2.png" alt="">
-                        <p class="countryName">塞内加尔</p>
-                    </div>
-                    <div style="margin-left: 0;margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h3.png" alt="">
-                        <p class="countryName">哥伦比亚</p>
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <img class="countryFlag" src="http://h5.superecow.com/canvas/generate/h4.png" alt="">
-                        <p class="countryName">日本</p>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="swiper-slide page4 stop-swiping">
