@@ -276,7 +276,7 @@ body,p,div,span,input,img,li,ul{
     height: 40px;
     position: absolute;
     z-index: 100;
-    margin-left: 10%;
+    margin-left: 20px;
     margin-top: 9%;
 }
 
