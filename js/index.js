@@ -243,33 +243,33 @@ $(".groupBox>div").click(function () {
     if(M.dialog3){
         return M.dialog3.show();
     }
-    var tsy = "您确定要投票"+self.children(".countryName").text()+"吗!"
-    M.dialog3 = jqueryAlert({
-        'title'   : '温馨提示',
-        'content' : tsy,
-        'modal'   : true,
-        'buttons' :{
-            '确定提交' : function(){
-                if(M.dialog31){
-                    return M.dialog31.show();
-                }
-                M.dialog3.close();
-                dataInfo.from_openid=getQueryString('Fopenid');//分享人的openid;
-                dataInfo.openid=userData.original.openid;
-                dataInfo.nickname=userData.original.nickname;
-                dataInfo.sex=userData.original.sex;
-                dataInfo.city=userData.original.city;
-                dataInfo.country=userData.original.country;
-                dataInfo.province=userData.original.province;
-                dataInfo.headimgurl=userData.original.headimgurl;
-                dataInfo.unionid="";
-                dataInfo.subscribe="";
-                dataInfo.language="";
-                dataInfo.subscribe_time="";
-                dataInfo.remark="";
-                dataInfo.champion=self.children(".countryName").text();//国家
-                dataInfo.group_name="";//类别
-                if(flagAdd){
+    if(flagAdd){
+        var tsy = "您确定要投票"+self.children(".countryName").text()+"吗!"
+        M.dialog3 = jqueryAlert({
+            'title'   : '温馨提示',
+            'content' : tsy,
+            'modal'   : true,
+            'buttons' :{
+                '确定提交' : function(){
+                    if(M.dialog31){
+                        return M.dialog31.show();
+                    }
+                    M.dialog3.close();
+                    dataInfo.from_openid=getQueryString('Fopenid');//分享人的openid;
+                    dataInfo.openid=userData.original.openid;
+                    dataInfo.nickname=userData.original.nickname;
+                    dataInfo.sex=userData.original.sex;
+                    dataInfo.city=userData.original.city;
+                    dataInfo.country=userData.original.country;
+                    dataInfo.province=userData.original.province;
+                    dataInfo.headimgurl=userData.original.headimgurl;
+                    dataInfo.unionid="";
+                    dataInfo.subscribe="";
+                    dataInfo.language="";
+                    dataInfo.subscribe_time="";
+                    dataInfo.remark="";
+                    dataInfo.champion=self.children(".countryName").text();//国家
+                    dataInfo.group_name="";//类别
                     $.post('http://gb.wechat.wcampaign.cn/user/add', dataInfo, function(data){
                         $(".tx").attr("src",userData.original.headimgurl);
                         $(".tx").show();
@@ -282,18 +282,18 @@ $(".groupBox>div").click(function () {
                             next(2);
                         });
                     }, "JSON");
-                }else{
-                    M.dialog1 = jqueryAlert({
-                        'content' : '您已经投过票了,请勿重复投票!',
-                        'closeTime' : 2000
-                    })
+                },
+                '取消' : function(){
+                    M.dialog3.close();
                 }
-            },
-            '取消' : function(){
-                M.dialog3.close();
             }
-        }
-    })
+        })
+    }else{
+        M.dialog1 = jqueryAlert({
+            'content' : '您已经投过票了,请勿重复投票!',
+            'closeTime' : 2000
+        })
+    }
 })
 
 //点击选择部门
