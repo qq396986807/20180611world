@@ -316,8 +316,6 @@ $("#adNext").click(function () {
     $(".advertisement").fadeOut(1000);
     if(flagAdd){
         next(3);
-    }else {
-        flagAdd = true;
     }
 })
 
