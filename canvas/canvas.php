@@ -197,38 +197,38 @@ echo 222;
         var h3 = [];
         var h4 = [];
         for(var i=0;i<data.length;i++){
-            if(data[i]['champion'] == '俄罗斯') {a1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '沙特阿拉伯') {a2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '埃及') {a3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '乌拉圭') {a4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '葡萄牙') {b1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '西班牙') {b2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '摩洛哥') {b3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '伊朗') {b4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '法国') {c1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '澳大利亚') {c2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '秘鲁') {c3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '丹麦') {c4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '阿根廷') {d1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '冰岛') {d2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '克罗地亚') {d3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '尼日利亚') {d4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '巴西') {e1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '瑞士') {e2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '哥斯达黎加') {e3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '塞尔维亚') {e4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '德国') {f1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '墨西哥') {f2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '瑞典') {f3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '韩国') {f4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '比利时') {g1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '巴拿马') {g2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '突尼斯') {g3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '英格兰') {g4.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '波兰') {h1.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '塞内加尔') {h2.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '哥伦比亚') {h3.push(data[i]['headimgurl'])}
-            if(data[i]['champion'] == '日本') {h4.push(data[i]['headimgurl'])}
+            if(data[i]['champion'] == '俄罗斯') {a1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '沙特阿拉伯') {a2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '埃及') {a3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '乌拉圭') {a4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '葡萄牙') {b1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '西班牙') {b2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '摩洛哥') {b3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '伊朗') {b4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '法国') {c1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '澳大利亚') {c2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '秘鲁') {c3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '丹麦') {c4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '阿根廷') {d1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '冰岛') {d2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '克罗地亚') {d3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '尼日利亚') {d4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '巴西') {e1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '瑞士') {e2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '哥斯达黎加') {e3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '塞尔维亚') {e4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '德国') {f1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '墨西哥') {f2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '瑞典') {f3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '韩国') {f4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '比利时') {g1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '巴拿马') {g2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '突尼斯') {g3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '英格兰') {g4.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '波兰') {h1.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '塞内加尔') {h2.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '哥伦比亚') {h3.push(data[i]['headimgbase64'])}
+            if(data[i]['champion'] == '日本') {h4.push(data[i]['headimgbase64'])}
         }
         draw('canvas1','original/a1.png',a1,'#img1','a1');
         draw('canvas2','original/a2.png',a2,'#img2','a2');
