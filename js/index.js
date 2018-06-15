@@ -412,7 +412,7 @@ function advertisement() {
 
 //跳转知识来源
 function locationUrl(name,url) {
-    // _hmt.push(['_trackEvent', '知识来源',name, 'literature']);
+    _hmt.push(['_trackEvent', '知识来源',name, 'literature']);
     window.location.href = url;
 }
 
